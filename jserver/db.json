@@ -2,38 +2,38 @@
   "todos": [
     {
       "id": 1,
-      "todo": "Do something nice for someone I care about",
+      "todo": "Do something nice for someone I care about and take action",
       "completed": false,
       "userId": 26
     },
     {
       "id": 2,
       "todo": "Memorize the fifty states and their capitals",
-      "completed": false,
+      "completed": true,
       "userId": 48
     },
     {
       "id": 3,
-      "todo": "Watch a classic movie die hard",
-      "completed": true,
+      "todo": "Watch a classic movie Die Hard ",
+      "completed": false,
       "userId": 4
     },
     {
       "id": 4,
-      "todo": "Contribute code or a monetary donation to an open-source software project",
+      "todo": "Contribute code or a monetary donation to an open-source software project ",
       "completed": true,
       "userId": 48
     },
     {
       "id": 6,
-      "todo": "Bake pastries for me and neighbor",
+      "todo": "Bake pastries for me and neighbor and society",
       "completed": false,
       "userId": 39
     },
     {
       "id": 7,
-      "todo": "Go see a Broadway production",
-      "completed": false,
+      "todo": "Go see a Broadway production 23",
+      "completed": true,
       "userId": 32
     },
     {
@@ -51,12 +51,12 @@
     {
       "id": 11,
       "todo": "Text a friend I haven't talked to in a long time",
-      "completed": false,
+      "completed": true,
       "userId": 39
     },
     {
       "id": 12,
-      "todo": "Organize pantry",
+      "todo": "Organize party",
       "completed": false,
       "userId": 39
     },
@@ -75,7 +75,7 @@
     {
       "id": 15,
       "todo": "Clean out car",
-      "completed": false,
+      "completed": true,
       "userId": 33
     },
     {
@@ -134,7 +134,7 @@
     },
     {
       "id": 25,
-      "todo": "Learn Express.js",
+      "todo": "Learn Express.js and React.js",
       "completed": true,
       "userId": 49
     },
@@ -160,16 +160,6 @@
       "todo": "Make own LEGO creation and hot wheels",
       "id": 29,
       "completed": true
-    },
-    {
-      "todo": "Watch family man season 3",
-      "completed": false,
-      "id": 30
-    },
-    {
-      "todo": "sfdgfgdfdg",
-      "completed": true,
-      "id": 31
     }
   ]
 }

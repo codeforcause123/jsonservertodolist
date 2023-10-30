@@ -1,6 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Inter:wght@100&family=JetBrains+Mono&family=Jua&family=League+Gothic&family=Lora&family=Metrophobic&family=Montserrat&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,300&family=Oswald:wght@300&family=Roboto+Mono:wght@300&family=Shadows+Into+Light&family=Source+Code+Pro:wght@500&display=swap');
 .App {
   text-align: center;
-  background-color: grey;
+  background-color: white;
 }
 
 .App-logo {

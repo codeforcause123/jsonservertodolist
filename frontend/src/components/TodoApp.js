@@ -7,7 +7,12 @@ import {
   useDeleteTodo,
 } from "./TodoService";
 import { QueryClient, QueryClientProvider } from "react-query";
-import { TodoDiv } from "../styles/AllStyles";
+import {
+  CancelButton,
+  DeleteButton,
+  EditButton,
+  SaveButton,
+} from "../styles/AllStyles";
 import LoaderComp from "./Spinner";
 
 const queryClient = new QueryClient();
@@ -72,55 +77,88 @@ function TodoList() {
   return (
     <div>
       <form
+        className="w-1/2 mx-auto mb-8"
         onSubmit={(e) => {
           e.preventDefault();
           handleAddTodo();
         }}
       >
-        <input
-          type="text"
-          placeholder="Add a new todo"
-          value={newTodo}
-          onChange={(e) => setNewTodo(e.target.value)}
-        />
-        <button type="submit">Add</button>
+        <div className="relative">
+          <input
+            type="text"
+            placeholder="Add a new todo"
+            value={newTodo}
+            onChange={(e) => setNewTodo(e.target.value)}
+            className="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          />
+          <button
+            type="submit"
+            className="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          >
+            Add
+          </button>
+        </div>
       </form>
-      <TodoDiv>
-        {todos.map((todo) => (
-          <div key={todo.id}>
-            {editingTodo === todo.id ? (
-              <div>
-                <input
-                  type="text"
-                  value={editedText}
-                  onChange={(e) => setEditedText(e.target.value)}
-                />
-                <button
-                  onClick={() =>
-                    handleUpdateTodo({ ...todo, todo: editedText })
-                  }
-                >
-                  Save
-                </button>
-                <button onClick={handleCancelEditing}>Cancel</button>
-              </div>
-            ) : (
-              <>
-                <input
-                  type="checkbox"
-                  checked={todo.completed}
-                  onChange={() => handleToggleCompleted(todo)}
-                />
-                {todo.todo}
-                <button onClick={() => handleDeleteTodo(todo.id)}>
-                  Delete
-                </button>
-                <button onClick={() => handleStartEditing(todo)}>Edit</button>
-              </>
-            )}
-          </div>
-        ))}
-      </TodoDiv>
+      <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
+        <table className="mx-auto w-1/2 text-sm text-left text-gray-500 dark:text-gray-400">
+          <tbody>
+            {todos.map((todo) => (
+              <tr
+                key={todo.id}
+                className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 h-24"
+              >
+                <td className="px-4 rounded-l-md">
+                  <input
+                    type="checkbox"
+                    checked={todo.completed}
+                    onChange={() => handleToggleCompleted(todo)}
+                    className="w-4 h-4 text-orange-500 bg-gray-100 border-gray-300 rounded focus:ring-orange-500 dark:focus:ring-orange-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                  />
+                </td>
+                <td className="text-center">
+                  {editingTodo === todo.id ? (
+                    <div>
+                      <input
+                        type="text"
+                        value={editedText}
+                        onChange={(e) => setEditedText(e.target.value)}
+                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                      />
+                    </div>
+                  ) : (
+                    <span className="text-white">{todo.todo}</span>
+                  )}
+                </td>
+                <td>
+                  {editingTodo === todo.id ? (
+                    <div>
+                      <SaveButton
+                        onClick={() =>
+                          handleUpdateTodo({ ...todo, todo: editedText })
+                        }
+                      >
+                        Save
+                      </SaveButton>
+                      <CancelButton onClick={handleCancelEditing}>
+                        Cancel
+                      </CancelButton>
+                    </div>
+                  ) : (
+                    <EditButton onClick={() => handleStartEditing(todo)}>
+                      Edit
+                    </EditButton>
+                  )}
+                </td>
+                <td className="rounded-r-md">
+                  <DeleteButton onClick={() => handleDeleteTodo(todo.id)}>
+                    Delete
+                  </DeleteButton>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }

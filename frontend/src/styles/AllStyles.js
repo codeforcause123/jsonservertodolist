@@ -17,6 +17,7 @@ export const Title = styled.div`
   border-radius: 0.5rem;
   margin-bottom: 20px;
   font-family: Shadows Into Light;
+  box-shadow: 10px 10px 10px 0 #16a34a;
 `;
 
 export const AddForm = styled.form`
@@ -120,4 +121,9 @@ export const CancelButton = styled.button`
     transition-duration: 0s, 0.15s;
     color: rgb(255, 255, 255);
   }
+`;
+
+export const TodoItem = styled.span`
+  color: white;
+  font-size: 18px;
 `;

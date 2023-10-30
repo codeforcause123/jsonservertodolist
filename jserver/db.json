@@ -2,7 +2,7 @@
   "todos": [
     {
       "id": 1,
-      "todo": "Do something nice for someone I care about and take action",
+      "todo": "Do something nice for someone I care about.",
       "completed": false,
       "userId": 26
     },
@@ -32,7 +32,7 @@
     },
     {
       "id": 7,
-      "todo": "Go see a Broadway production 23",
+      "todo": "Go see a Broadway production",
       "completed": true,
       "userId": 32
     },
@@ -157,7 +157,7 @@
       "userId": 15
     },
     {
-      "todo": "Make own LEGO creation and hot wheels",
+      "todo": "Make own LEGO creation ",
       "id": 29,
       "completed": true
     }

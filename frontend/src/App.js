@@ -8,7 +8,7 @@ const queryClient = new QueryClient();
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <div className="App bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-yellow-200 to-yellow-500">
+      <div className="App bg-gradient-to-r from-yellow-200 via-green-200 to-green-300">
         <PageTitle />
         <Wrapper />
       </div>

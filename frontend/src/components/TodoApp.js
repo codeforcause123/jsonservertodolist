@@ -12,6 +12,7 @@ import {
   DeleteButton,
   EditButton,
   SaveButton,
+  TodoItem
 } from "../styles/AllStyles";
 import LoaderComp from "./Spinner";
 
@@ -112,7 +113,7 @@ function TodoList() {
                     type="checkbox"
                     checked={todo.completed}
                     onChange={() => handleToggleCompleted(todo)}
-                    className="w-4 h-4 text-orange-500 bg-gray-100 border-gray-300 rounded focus:ring-orange-500 dark:focus:ring-orange-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                    className="accent-orange-300"
                   />
                 </td>
                 <td className="text-center">
@@ -126,7 +127,7 @@ function TodoList() {
                       />
                     </div>
                   ) : (
-                    <span className="text-white">{todo.todo}</span>
+                    <TodoItem className="text-white">{todo.todo}</TodoItem>
                   )}
                 </td>
                 <td>

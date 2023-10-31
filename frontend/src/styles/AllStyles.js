@@ -17,8 +17,9 @@ export const Title = styled.div`
   border-radius: 0.5rem;
   margin-bottom: 20px;
   font-family: Shadows Into Light;
-  box-shadow: 10px 10px 10px 0 #16a34a;
+  box-shadow: 10px 10px 0 #16a34a;
 `;
+
 
 export const AddForm = styled.form`
   margin: 20px;

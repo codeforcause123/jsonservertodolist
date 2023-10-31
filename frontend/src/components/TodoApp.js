@@ -12,7 +12,7 @@ import {
   DeleteButton,
   EditButton,
   SaveButton,
-  TodoItem
+  TodoItem,
 } from "../styles/AllStyles";
 import LoaderComp from "./Spinner";
 
@@ -127,7 +127,13 @@ function TodoList() {
                       />
                     </div>
                   ) : (
-                    <TodoItem className="text-white">{todo.todo}</TodoItem>
+                    <TodoItem
+                      className={`text-white ${
+                        todo.completed ? "line-through" : ""
+                      }`}
+                    >
+                      {todo.todo}
+                    </TodoItem>
                   )}
                 </td>
                 <td>

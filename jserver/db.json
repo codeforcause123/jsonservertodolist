@@ -2,14 +2,14 @@
   "todos": [
     {
       "id": 1,
-      "todo": "Do something nice for someone I care about.",
+      "todo": "Do something nice for someone.",
       "completed": false,
       "userId": 26
     },
     {
       "id": 2,
       "todo": "Memorize the fifty states and their capitals",
-      "completed": true,
+      "completed": false,
       "userId": 48
     },
     {

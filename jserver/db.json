@@ -1,12 +1,6 @@
 {
   "todos": [
     {
-      "id": 1,
-      "todo": "Do something nice for someone.",
-      "completed": false,
-      "userId": 26
-    },
-    {
       "id": 2,
       "todo": "Memorize the fifty states and their capitals",
       "completed": false,
@@ -20,8 +14,8 @@
     },
     {
       "id": 4,
-      "todo": "Contribute code or a monetary donation to an open-source software project ",
-      "completed": true,
+      "todo": "Contribute code or a monetary donation to an open-source software project and publish",
+      "completed": false,
       "userId": 48
     },
     {
@@ -159,7 +153,7 @@
     {
       "todo": "Make own LEGO creation ",
       "id": 29,
-      "completed": true
+      "completed": false
     }
   ]
 }

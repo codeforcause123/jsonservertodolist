@@ -8,7 +8,7 @@ const queryClient = new QueryClient();
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <div className="App bg-gradient-to-r from-yellow-200 via-green-200 to-green-300">
+      <div className="App">
         <PageTitle />
         <Wrapper />
       </div>

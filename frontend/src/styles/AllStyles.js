@@ -6,7 +6,7 @@ export const TodoDiv = styled.div`
 export const Title = styled.div`
   width: 60%;
   padding: 20px;
-  background-color: #03543f;
+  background-color: #536878;
   font-size: 32px;
   color: white;
   font-weight: bold;
@@ -17,9 +17,8 @@ export const Title = styled.div`
   border-radius: 0.5rem;
   margin-bottom: 20px;
   font-family: Shadows Into Light;
-  box-shadow: 10px 10px 0 #16a34a;
+  box-shadow: 10px 10px 0 #71717a;
 `;
-
 
 export const AddForm = styled.form`
   margin: 20px;
@@ -55,20 +54,25 @@ export const DeleteButton = styled.button`
   }
 `;
 export const EditButton = styled.button`
-  padding-top: 0.625rem;
-  padding-bottom: 0.625rem;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-  margin-right: 0.5rem;
-  margin-bottom: 0.5rem;
-  border-radius: 0.5rem;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  font-weight: 500;
-  color: #ffffff;
-  background-color: #fbbf24;
+  /* Base button styles */
+  color: white;
+  background: #1e40af; /* Adjust the color code as needed */
+  font-weight: medium;
+  border-radius: 9999px; /* Large value to make it round */
+  font-size: 14px; /* Adjust the font size as needed */
+  padding: 10px 20px; /* Adjust padding as needed */
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px; /* Adjust the right margin as needed */
+  margin-bottom: 10px; /* Adjust the bottom margin as needed */
   &:hover {
-    background-color: #f59e0b;
+    background: #2563eb; /* Adjust the hover background color */
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px #93c5fd; /* Adjust the focus ring color and size */
   }
 `;
 

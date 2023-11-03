@@ -1,4 +1,3 @@
-// TodoService.js
 import { useQuery, useMutation } from "react-query";
 import axios from "axios";
 

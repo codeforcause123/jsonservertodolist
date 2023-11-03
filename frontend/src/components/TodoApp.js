@@ -1,4 +1,3 @@
-// TodoApp.js
 import React, { useState } from "react";
 import {
   useFetchTodos,
@@ -78,7 +77,7 @@ function TodoList() {
   return (
     <div>
       <form
-        className="w-1/2 mx-auto mb-8"
+        className="w-1/2 mx-auto my-8"
         onSubmit={(e) => {
           e.preventDefault();
           handleAddTodo();
@@ -101,19 +100,19 @@ function TodoList() {
         </div>
       </form>
       <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
-        <table className="mx-auto w-1/2 text-sm text-left text-gray-500 dark:text-gray-400">
+        <table className="mx-auto w-1/2 text-sm text-left text-gray-500 dark:text-gray-400 border-separate border-spacing-y-4">
           <tbody>
             {todos.map((todo) => (
               <tr
                 key={todo.id}
-                className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 h-24"
+                className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 h-24 shadow-2xl"
               >
                 <td className="px-4 rounded-l-md">
                   <input
                     type="checkbox"
                     checked={todo.completed}
                     onChange={() => handleToggleCompleted(todo)}
-                    className="accent-orange-300"
+                    className="accent-slate-300"
                   />
                 </td>
                 <td className="text-center">
